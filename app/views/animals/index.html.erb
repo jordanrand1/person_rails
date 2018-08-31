@@ -1,0 +1,18 @@
+<h1>Animals#index</h1>
+<p>Find me in app/views/animals/index.html.erb</p>
+<%= link_to 'New Animal', new_animal_path %>
+<table>
+  <thead>
+    <th>Name</th>
+  </thead>
+    <% @animals.each do |animal| %>
+      <tbody>
+        <tr>
+          <td><%= animal.name %></td>
+          <td><%= link_to 'Show', animal_path(animal.id) %></td>
+          <td><%= link_to 'Edit', edit_animal_path(animal.id) %></td>
+          <td><%= link_to 'Delete', animal_path(animal.id), {method: :delete} %></td>
+        </tr>
+      </tbody>
+    <% end %>
+</table>
