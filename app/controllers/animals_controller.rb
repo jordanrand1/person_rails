@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   def index
-    @animals = Animal.all
+    @animals = Animal.order(created_at: :asc)
   end
 
   def show
@@ -26,9 +26,12 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @animal = Animal.update(animal_params)
-
-    redirect_to animals_path
+    @animal = Animal.find(params[:id])
+    if @animal.update(animal_params)
+      redirect_to animals_path
+    else
+      render :edit
+    end
   end
 
   def destroy
