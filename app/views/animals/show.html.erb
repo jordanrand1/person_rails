@@ -1,25 +1,27 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
-<table>
-  <thead>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Hair color</th>
-    <th>Eye Color</th>
-    <th>Gender</th>
-    <th>Alive?</th>
-  </thead>
+<div class="container">
+  <h1>Animals#show</h1>
+  <p>Find me in app/views/animals/show.html.erb</p>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Hair color</th>
+      <th>Eye Color</th>
+      <th>Gender</th>
+      <th>Alive?</th>
+    </thead>
 
-  <tbody>
-    <tr>
-      <td><%= @animal.name %></td>
-      <td><%= @animal.age %></td>
-      <td><%= @animal.hair_color %></td>
-      <td><%= @animal.eye_color %></td>
-      <td><%= @animal.gender %></td>
-      <td><%= @animal.alive %></td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr>
+        <td><%= @animal.name %></td>
+        <td><%= @animal.age %></td>
+        <td><%= @animal.hair_color %></td>
+        <td><%= @animal.eye_color %></td>
+        <td><%= @animal.gender %></td>
+        <td><%= @animal.alive %></td>
+      </tr>
+    </tbody>
+  </table>
 
-<%= link_to 'Back', animals_path %>
+  <%= link_to 'Back', animals_path, {class: 'btn'} %>
+</div>
